@@ -25,7 +25,7 @@ public class Game extends JFrame
    private static int nibble = 4;
    private static int sec = 0;
    private static int tempo = 0;
-   private static int score = 0;
+   private static int score = -1;
    private ActionListener beater = new Action();
    private static String hex3 = dectohex(hex2); // converts integer to hexidecimal
    private JMenuBar menuBar;
@@ -93,7 +93,7 @@ public class Game extends JFrame
    }
    public void metro(int speed)
    {
-	   score = 0;
+	   score = -1;
 
 	   int beat = speed;
 	   Timer timer = new Timer();
