@@ -189,7 +189,6 @@ public class Game extends JFrame
 					  button.setLabel("Game Over:Your score is " + score);
 					  button.setForeground(Color.BLUE);
 
-					  ScoreBoard.addScore(score);
 				  }
 				if(bin.length() <= nibble*hex3.length() && stoper == false)
 				{
@@ -230,7 +229,8 @@ public class Game extends JFrame
  	    		sec = 0;
  	    		stoper = false;
  	    		hex3 = dectohex(hex2);
- 	    		new MainMenuWindow();
+				EnterYourName.trackScore(score);
+ 	    		new EnterYourName();
  	    	}
  	    	else if(bin.length() > 0 && checker == true)
  	    	{

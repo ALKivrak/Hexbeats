@@ -16,7 +16,7 @@ public class ScoreBoard extends JFrame
 	private final int WINDOW_WIDTH = 800;
 	private final int WINDOW_HEIGHT = 600;
 
-	private static ArrayList<Integer> scoreValues = new ArrayList<Integer>();
+	private static ArrayList<NameAndScore> scoreValues = new ArrayList<NameAndScore>();
 
 	public ScoreBoard()
 	{
@@ -36,8 +36,8 @@ public class ScoreBoard extends JFrame
 		pane.add(scores, BorderLayout.NORTH);
 	}
 
-	public static void addScore(final int score) {
-		scoreValues.add(score);
+	public static void addScore(final NameAndScore nameAndScore) {
+		scoreValues.add(nameAndScore);
 	}
 
 	static class Action implements ActionListener
